@@ -12,7 +12,7 @@ body {
     color: #222;
 }
 
-/* NAV (FIXED) */
+/* NAV */
 nav {
     display: flex;
     justify-content: space-between;
@@ -29,11 +29,9 @@ nav img {
     height: 50px;
 }
 
-/* NAV LINKS FIX */
 .nav-links {
     display: flex;
     gap: 18px;
-    flex-wrap: nowrap;
 }
 
 .nav-links a {
@@ -58,90 +56,47 @@ nav img {
 }
 
 .badge {
-    display: inline-block;
     background: #caa74a;
-    color: black;
     padding: 8px 15px;
-    font-size: 14px;
+    display: inline-block;
     margin-bottom: 15px;
-    letter-spacing: 1px;
 }
 
 .hero h1 {
     font-size: 60px;
-    margin: 10px 0;
 }
 
 .hero p {
     font-size: 20px;
-    opacity: 0.9;
 }
 
-/* TRUST */
-.trust {
-    display: flex;
-    gap: 20px;
-    margin: 25px 0;
-    flex-wrap: wrap;
-}
-
-.trust span {
-    border-left: 2px solid #caa74a;
-    padding-left: 10px;
-}
-
-/* BUTTONS */
 .buttons {
     margin-top: 30px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+}
+
+.call-btn, .estimate-btn {
+    padding: 15px 25px;
+    text-decoration: none;
+    margin-right: 10px;
 }
 
 .call-btn {
     background: #caa74a;
     color: black;
-    padding: 15px 25px;
-    text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    white-space: nowrap;
 }
 
 .estimate-btn {
     border: 2px solid #caa74a;
-    padding: 15px 25px;
-    text-decoration: none;
     color: white;
-    display: inline-block;
-    white-space: nowrap;
 }
 
-/* TRUST STRIP */
-.trust-strip {
-    background:#111;
-    color:white;
-    padding:30px 20px;
-}
-.trust-strip div {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
-    text-align:center;
-}
-
-/* SECTION */
+/* SERVICES */
 .section {
     padding: 70px 40px;
     text-align: center;
 }
-.section h2 {
-    margin-bottom: 30px;
-    font-size: 32px;
-}
 
-/* SERVICES */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -152,76 +107,22 @@ nav img {
     padding: 25px;
     background: #f4f4f4;
     border-radius: 12px;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* CTA */
-.cta {
-    background: #caa74a;
-    color: black;
-    padding: 40px;
-    text-align: center;
-}
-
-.cta a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* CONTACT */
-<section style="padding:60px 20px; background:#f8f9fb; font-family:Arial, sans-serif;">
-  <div style="max-width:600px; margin:auto; background:white; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-    
-    <h2 style="text-align:center; margin-bottom:10px;">Get a Free Roofing Estimate</h2>
-    <p style="text-align:center; color:#666; margin-bottom:25px;">
-      Fast response. Professional service. No obligation.
-    </p>
-
-    <form action="https://formspree.io/f/xwvypwla" method="POST">
-
-      <input type="text" name="name" placeholder="Full Name" required
-        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-
-      <input type="tel" name="phone" placeholder="Phone Number" required
-        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-
-      <input type="email" name="email" placeholder="Email Address" required
-        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-
-      <input type="text" name="address" placeholder="Property Address"
-        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-
-      <textarea name="message" placeholder="Describe your roofing project..."
-        style="width:100%; padding:12px; margin-bottom:20px; border:1px solid #ddd; border-radius:8px; height:120px;"></textarea>
-
-      <button type="submit"
-        style="width:100%; padding:14px; background:#e63946; color:white; border:none; border-radius:8px; font-size:16px; font-weight:bold; cursor:pointer;">
-        Get Free Estimate
-      </button>
-
-    </form>
-
-  </div>
-</section>
-
-form input, form textarea {
+/* CONTACT FORM */
+#contact input, #contact textarea {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
 }
 
-form button {
+#contact button {
     padding: 15px;
     width: 100%;
-    background: black;
-    color: white;
+    background: #caa74a;
     border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -234,30 +135,7 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .hero {
-        padding: 20px;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    nav img {
-        height: 45px;
-    }
+    .hero h1 { font-size: 42px; }
 }
 </style>
 </head>
@@ -266,7 +144,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-    <img src="logo.png.PNG" alt="Kevin Rivas Roofing Logo">
+    <img src="logo.png.PNG" alt="Logo">
     <div class="nav-links">
         <a href="#">Home</a>
         <a href="#services">Services</a>
@@ -277,46 +155,13 @@ footer {
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-
         <div class="badge">PREMIUM ROOFING SOLUTIONS</div>
-
         <h1>Kevin Rivas Roofing Inc</h1>
-
         <p>Elite Roofing Solutions Across California</p>
 
-        <div class="trust">
-            <span>Licensed</span>
-            <span>Bonded</span>
-            <span>Insured</span>
-            <span>LIC#1143148</span>
-        </div>
-
         <div class="buttons">
-            <a href="tel:14424610326" class="call-btn">📞 Call Now</a>
-            <a href="#contact" class="estimate-btn">Get Estimate →</a>
-        </div>
-
-    </div>
-</section>
-
-<!-- TRUST STRIP -->
-<section class="trust-strip">
-    <div>
-        <div>
-            <h3>Quality Work</h3>
-            <p>Built to Last</p>
-        </div>
-        <div>
-            <h3>Fast Response</h3>
-            <p>Emergency Services</p>
-        </div>
-        <div>
-            <h3>Expert Roofers</h3>
-            <p>Professional Installation</p>
-        </div>
-        <div>
-            <h3>Guaranteed</h3>
-            <p>100% Satisfaction</p>
+            <a href="tel:14424610326" class="call-btn">Call Now</a>
+            <a href="#contact" class="estimate-btn">Get Estimate</a>
         </div>
     </div>
 </section>
@@ -325,57 +170,31 @@ footer {
 <section id="services" class="section">
     <h2>Our Roofing Services</h2>
     <div class="services">
-        <div class="card">
-            <h3>Roof Replacements</h3>
-            <p>Full tear-offs and new roofing systems built to last.</p>
-        </div>
-        <div class="card">
-            <h3>Shingle & Tile Replacement</h3>
-            <p>Durable and high-performance roofing materials installed properly.</p>
-        </div>
-        <div class="card">
-            <h3>Leak Repairs</h3>
-            <p>Fast diagnosis and permanent leak solutions.</p>
-        </div>
-        <div class="card">
-            <h3>Torch Down Roofing</h3>
-            <p>Modified bitumen systems for flat and low-slope roofs.</p>
-        </div>
-        <div class="card">
-            <h3>TPO & Flat Roofs</h3>
-            <p>Energy-efficient and long-lasting commercial systems.</p>
-        </div>
-        <div class="card">
-            <h3>Emergency Repairs</h3>
-            <p>Quick response when your roof needs immediate attention.</p>
-        </div>
+        <div class="card"><h3>Roof Replacements</h3></div>
+        <div class="card"><h3>Leak Repairs</h3></div>
+        <div class="card"><h3>Shingle & Tile</h3></div>
+        <div class="card"><h3>Flat Roofing</h3></div>
     </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <h2>Call Now for a Free Estimate</h2>
-    <a href="tel:14424610326">📞 442-461-0326</a>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-    <h2>Request a Quote</h2>
-    <form action="https://formsubmit.co/kevinrivasroofinginc@gmail.com" method="POST">
+    <h2>Request a Free Estimate</h2>
+
+    <form action="https://formspree.io/f/xdabkpzq" method="POST">
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Email">
-        <textarea name="message" placeholder="Describe your roofing project"></textarea>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Describe your roofing job"></textarea>
         <button type="submit">Get Estimate</button>
     </form>
+
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>Kevin Rivas Roofing Inc</p>
-    <p>Serving California</p>
-    <p>📞 442-461-0326 | ✉️ kevinsroofingco@gmail.com</p>
-    <p>Licensed • Bonded • Insured | LIC#1143148</p>
+    <p>📞 442-461-0326</p>
 </footer>
 
 </body>

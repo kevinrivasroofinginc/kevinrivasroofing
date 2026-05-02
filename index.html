@@ -34,7 +34,7 @@ nav a {
     font-weight: 500;
 }
 
-/* HERO ELITE */
+/* HERO */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
     url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
@@ -69,23 +69,24 @@ nav a {
     opacity: 0.9;
 }
 
-/* TRUST ROW */
+/* TRUST */
 .trust {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     margin: 25px 0;
-    font-size: 15px;
     flex-wrap: wrap;
 }
-
 .trust span {
     border-left: 2px solid #caa74a;
     padding-left: 10px;
 }
 
-/* BUTTONS */
+/* BUTTONS FIXED */
 .buttons {
-    margin-top: 25px;
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .call-btn {
@@ -93,8 +94,9 @@ nav a {
     color: black;
     padding: 15px 25px;
     text-decoration: none;
-    margin-right: 15px;
     font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .estimate-btn {
@@ -102,6 +104,22 @@ nav a {
     padding: 15px 25px;
     text-decoration: none;
     color: white;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* TRUST STRIP */
+.trust-strip {
+    background:#111;
+    color:white;
+    padding:30px 20px;
+}
+.trust-strip div {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    text-align:center;
 }
 
 /* SECTION */
@@ -130,7 +148,7 @@ nav a {
     transform: translateY(-5px);
 }
 
-/* CTA STRIP */
+/* CTA */
 .cta {
     background: #caa74a;
     color: black;
@@ -160,7 +178,6 @@ form button {
     background: black;
     color: white;
     border: none;
-    font-size: 16px;
 }
 
 /* FOOTER */
@@ -169,7 +186,22 @@ footer {
     color: white;
     text-align: center;
     padding: 30px;
-    font-size: 14px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 </style>
 </head>
@@ -205,9 +237,31 @@ footer {
 
         <div class="buttons">
             <a href="tel:14424610326" class="call-btn">📞 Call Now</a>
-            <a href="#contact" class="estimate-btn">Get Free Estimate</a>
+            <a href="#contact" class="estimate-btn">Get Estimate →</a>
         </div>
 
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+    <div>
+        <div>
+            <h3>Quality Work</h3>
+            <p>Built to Last</p>
+        </div>
+        <div>
+            <h3>Fast Response</h3>
+            <p>Emergency Services</p>
+        </div>
+        <div>
+            <h3>Expert Roofers</h3>
+            <p>Professional Installation</p>
+        </div>
+        <div>
+            <h3>Guaranteed</h3>
+            <p>100% Satisfaction</p>
+        </div>
     </div>
 </section>
 
@@ -251,22 +305,4 @@ footer {
 <!-- CONTACT -->
 <section id="contact" class="section">
     <h2>Request a Quote</h2>
-    <form action="https://formsubmit.co/kevinrivasroofinginc@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Email">
-        <textarea name="message" placeholder="Describe your roofing project"></textarea>
-        <button type="submit">Get Estimate</button>
-    </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>Kevin Rivas Roofing Inc</p>
-    <p>Serving California</p>
-    <p>📞 442-461-0326 | ✉️ kevinrivasroofinginc@gmail.com</p>
-    <p>Licensed • Bonded • Insured | LIC#1143148</p>
-</footer>
-
-</body>
-</html>
+    <form action="https

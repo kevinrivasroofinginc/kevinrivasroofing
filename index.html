@@ -18,48 +18,90 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background: #0b0b0b;
+    background: #0a0a0a;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 nav img {
-    height: 50px;
+    height: 55px;
 }
 nav a {
     color: white;
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
     font-weight: 500;
 }
 
-/* HERO */
+/* HERO ELITE */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url('https://images.unsplash.com/photo-1597002577003-1e6d1cdb5c8d') center/cover;
-    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
+    height: 95vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 0 40px;
     color: white;
 }
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
+
+.hero-content {
+    max-width: 700px;
 }
+
+.badge {
+    display: inline-block;
+    background: #caa74a;
+    color: black;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
 .hero p {
     font-size: 20px;
+    opacity: 0.9;
 }
-.hero button {
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 18px;
-    background: #d62828;
-    border: none;
+
+/* TRUST ROW */
+.trust {
+    display: flex;
+    gap: 25px;
+    margin: 25px 0;
+    font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.trust span {
+    border-left: 2px solid #caa74a;
+    padding-left: 10px;
+}
+
+/* BUTTONS */
+.buttons {
+    margin-top: 25px;
+}
+
+.call-btn {
+    background: #caa74a;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.estimate-btn {
+    border: 2px solid #caa74a;
+    padding: 15px 25px;
+    text-decoration: none;
     color: white;
-    cursor: pointer;
 }
 
 /* SECTION */
@@ -90,13 +132,13 @@ nav a {
 
 /* CTA STRIP */
 .cta {
-    background: #d62828;
-    color: white;
+    background: #caa74a;
+    color: black;
     padding: 40px;
     text-align: center;
 }
 .cta a {
-    color: white;
+    color: black;
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
@@ -146,13 +188,26 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-    <div>
-        <h1 style="letter-spacing:1px;">Kevin Rivas Roofing Inc</h1>
-<p style="font-size:20px; margin-top:10px;">
-Elite Roofing Solutions Across California
-</p>
-<p style="opacity:0.85;">Licensed • Bonded • Insured | LIC#1143148</p>
-        <button onclick="document.getElementById('contact').scrollIntoView()">Get Free Estimate</button>
+    <div class="hero-content">
+
+        <div class="badge">PREMIUM ROOFING SOLUTIONS</div>
+
+        <h1>Kevin Rivas Roofing Inc</h1>
+
+        <p>Elite Roofing Solutions Across California</p>
+
+        <div class="trust">
+            <span>Licensed</span>
+            <span>Bonded</span>
+            <span>Insured</span>
+            <span>LIC#1143148</span>
+        </div>
+
+        <div class="buttons">
+            <a href="tel:14424610326" class="call-btn">📞 Call Now</a>
+            <a href="#contact" class="estimate-btn">Get Free Estimate</a>
+        </div>
+
     </div>
 </section>
 
